@@ -6,38 +6,49 @@
 
 [![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
 [![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README-ZH_CN.md)\
-![License](https://img.shields.io/badge/License-Apache%202-green.svg)
 [![ChatGPT downloads](https://img.shields.io/github/downloads/lencx/ChatGPT/total.svg?style=flat-square)](https://github.com/lencx/ChatGPT/releases)
 [![chat](https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord)](https://discord.gg/aPhCRf4zZr)
-[![lencx](https://img.shields.io/twitter/follow/lencx_.svg?style=social)](https://twitter.com/lencx_)
+[![lencx](https://img.shields.io/badge/follow-lencx__-blue?style=flat&logo=Twitter)](https://twitter.com/lencx_)
+
+<!-- [![lencx](https://img.shields.io/twitter/follow/lencx_.svg?style=social)](https://twitter.com/lencx_) -->
 
 <a href="https://www.buymeacoffee.com/lencx" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;" ></a>
+
+**它是一个非官方项目，仅供个人学习研究。ChatGPT 桌面应用开源的这段时间，受到了很多关注，谢谢大家的支持。随着事情的发展，有两个问题严重影响了项目的下一步开发计划:**
+
+- **有人利用它进行二次打包销售，谋取私利**
+- **ChatGPT 因名称和图标问题可能会涉及侵权**
+
+**新仓库：https://github.com/lencx/nofwl**
+
+---
 
 ## 📦 安装
 
 - [📝 更新日志](./UPDATE_LOG.md)
 - [🕒 历史版本...](https://github.com/lencx/ChatGPT/releases)
 
-<!-- download start -->
+<!-- tr-download-start -->
 
 ### Windows
 
-- [ChatGPT_0.9.2_x64_en-US.msi](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/ChatGPT_0.9.2_x64_en-US.msi):
+- [ChatGPT_0.12.0_windows_x86_64.msi](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_windows_x86_64.msi)
 - 使用 [winget](https://winstall.app/apps/lencx.ChatGPT):
+
   ```bash
   # install the latest version
   winget install --id=lencx.ChatGPT -e
 
   # install the specified version
-  winget install --id=lencx.ChatGPT -e --version 0.9.0
+  winget install --id=lencx.ChatGPT -e --version 0.10.0
   ```
 
-**注意：如果安装路径和应用名称相同，会导致冲突 ([#142](https://github.com/lencx/ChatGPT/issues/142#issuecomment-0.9.2))**
+**注意：如果安装路径和应用名称相同，会导致冲突 ([#142](https://github.com/lencx/ChatGPT/issues/142#issuecomment-0.12.0))**
 
 ### Mac
 
-- [ChatGPT_0.9.2_x64.dmg](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/ChatGPT_0.9.2_x64.dmg)
-- [ChatGPT.app.tar.gz](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/ChatGPT.app.tar.gz)
+- [ChatGPT_0.12.0_macos_aarch64.dmg](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_macos_aarch64.dmg)
+- [ChatGPT_0.12.0_macos_x86_64.dmg](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_macos_x86_64.dmg)
 - Homebrew \
   _[Homebrew 快捷安装](https://brew.sh) ([Cask](https://docs.brew.sh/Cask-Cookbook)):_
   ```sh
@@ -51,16 +62,18 @@
   cask "chatgpt", args: { "no-quarantine": true }
   ```
 
+如果在 macOS 上安装软件时遇到 `“ChatGPT” is damaged and can't be opened. You should move it to the Trash.` 错误消息，可能是由于 macOS 安全设置的限制导致的。为了解决此问题，请在终端尝试以下命令：
+
+```bash
+sudo xattr -r -d com.apple.quarantine /YOUR_PATH/ChatGPT.app
+```
+
 ### Linux
 
-- [chat-gpt_0.9.2_amd64.deb](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/chat-gpt_0.9.2_amd64.deb)
-- [chat-gpt_0.9.2_amd64.AppImage](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/chat-gpt_0.9.2_amd64.AppImage): **工作可靠，`.deb` 运行失败时可以尝试它**
-- 使用 [AUR](https://aur.archlinux.org/packages/chatgpt-desktop-bin):
-  ```bash
-  yay -S chatgpt-desktop-bin
-  ```
+- [ChatGPT_0.12.0_linux_x86_64.deb](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_linux_x86_64.deb)
+- [ChatGPT_0.12.0_linux_x86_64.AppImage.tar.gz](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_linux_x86_64.AppImage.tar.gz): **工作可靠，`.deb` 运行失败时可以尝试它**
 
-<!-- download end -->
+<!-- tr-download-end -->
 
 ## 📢 公告
 
@@ -84,6 +97,7 @@
 
 - 跨平台: `macOS` `Linux` `Windows`
 - 导出 ChatGPT 聊天记录 (支持 PNG, PDF 和生成分享链接)
+- 主窗口和系统托盘支持自定义 URL，将任意网站包装成一个桌面应用
 - 应用自动升级通知
 - 丰富的快捷键
 - 系统托盘悬浮窗
@@ -126,6 +140,7 @@
 
 - `[.chatgpt]` - 应用配置根路径
   - `chat.conf.json` - 应用喜好配置
+  - `chat.awesome.json` - 自定义 URL 列表，类似于浏览器书签。可以将任意 URL 作为主窗口或托盘窗口 (**Control Conter -> Awesome**)
   - `chat.model.json` - ChatGPT 输入提示，通过斜杠命令来快速完成输入，主要包含三部分:
     - `user_custom` - 需要手动录入 (**Control Conter -> Language Model -> User Custom**)
     - `sync_prompts` - 从 [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) 同步数据 (**Control Conter -> Language Model -> Sync Prompts**)
@@ -242,6 +257,8 @@ yarn build
 国内用户如果遇到使用问题或者想交流 ChatGPT 技巧，可以关注公众号“浮之静”，发送 “chat” 进群参与讨论。公众号会更新[《Tauri 系列》](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIzNjE2NTI3NQ==&action=getalbum&album_id=2593843659863752704)文章，技术思考等等，如果对 tauri 开发应用感兴趣可以关注公众号后回复 “tauri” 进技术开发群（想私聊的也可以关注公众号，来添加微信）。开源不易，如果这个项目对你有帮助可以分享给更多人，或者微信扫码打赏。
 
 <img width="180" src="https://user-images.githubusercontent.com/16164244/207228300-ea5c4688-c916-4c55-a8c3-7f862888f351.png"> <img width="200" src="https://user-images.githubusercontent.com/16164244/207228025-117b5f77-c5d2-48c2-a070-774b7a1596f2.png">
+
+<a href="https://t.zsxq.com/0bQikmcVw"><img width="360" src="./assets/zsxq.png"></a>
 
 ## License
 

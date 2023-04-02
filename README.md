@@ -6,40 +6,58 @@
 
 [![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
 [![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README-ZH_CN.md)\
-![License](https://img.shields.io/badge/License-Apache%202-green.svg)
+![visitor](https://visitor-badge.glitch.me/badge?page_id=lencx.chatgpt)
 [![ChatGPT downloads](https://img.shields.io/github/downloads/lencx/ChatGPT/total.svg?style=flat-square)](https://github.com/lencx/ChatGPT/releases)
 [![chat](https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord)](https://discord.gg/aPhCRf4zZr)
-[![lencx](https://img.shields.io/twitter/follow/lencx_.svg?style=social)](https://twitter.com/lencx_)
+[![lencx](https://img.shields.io/badge/follow-lencx__-blue?style=flat&logo=Twitter)](https://twitter.com/lencx_)
+
+<!-- [![lencx](https://img.shields.io/twitter/follow/lencx_.svg?style=social)](https://twitter.com/lencx_) -->
 
 <!-- [![中文版 badge](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-Traditional%20Chinese-blue)](./README-ZH.md) -->
 
 <a href="https://www.buymeacoffee.com/lencx" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;" ></a>
+
+**🛑 URGENT NOTICE: A hacker has been found to take advantage of the heat of `lencx/ChatGPT` to plant a Trojan horse after the fork project and rebuild the installer. If you have friends around you who are using this desktop application, please remind them not to download unknown links freely. Now the project will remove other installation ways and only provide this download link https://github.com/lencx/ChatGPT/releases**
+
+**🛑 紧急通知：目前发现有黑客利用 `lencx/ChatGPT` 的热度，在 fork 项目后植入木马，重新构建安装程序。如果你身边有朋友正在使用此桌面应用，请提醒 TA 们不要随意下载不明链接。现在项目将删除其他安装途径，仅提供此下载链接 https://github.com/lencx/ChatGPT/releases**
+
+---
+
+**It is an unofficial project intended for personal learning and research purposes only. During the time that the ChatGPT desktop application was open-sourced, it received a lot of attention, and I would like to thank everyone for their support. However, as things have developed, there are two issues that seriously affect the project's next development plan:**
+
+- **Some people have used it for repackaging and selling for profit.**
+- **The name and icon of ChatGPT may be involved in infringement issues.**
+
+**New repository: https://github.com/lencx/nofwl**
+
+---
 
 ## 📦 Install
 
 - [📝 Update Log](./UPDATE_LOG.md)
 - [🕒 History versions...](https://github.com/lencx/ChatGPT/releases)
 
-<!-- download start -->
+<!-- tr-download-start -->
 
 ### Windows
 
-- [ChatGPT_0.9.2_x64_en-US.msi](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/ChatGPT_0.9.2_x64_en-US.msi): Direct download installer
+- [ChatGPT_0.12.0_windows_x86_64.msi](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_windows_x86_64.msi): Direct download installer
 - Use [winget](https://winstall.app/apps/lencx.ChatGPT):
+
   ```bash
   # install the latest version
   winget install --id=lencx.ChatGPT -e
 
   # install the specified version
-  winget install --id=lencx.ChatGPT -e --version 0.9.0
+  winget install --id=lencx.ChatGPT -e --version 0.10.0
   ```
 
-**Note: If the installation path and application name are the same, it will lead to conflict ([#142](https://github.com/lencx/ChatGPT/issues/142#issuecomment-0.9.2))**
+**Note: If the installation path and application name are the same, it will lead to conflict ([#142](https://github.com/lencx/ChatGPT/issues/142#issuecomment-0.12.0))**
 
 ### Mac
 
-- [ChatGPT_0.9.2_x64.dmg](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/ChatGPT_0.9.2_x64.dmg): Direct download installer
-- [ChatGPT.app.tar.gz](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/ChatGPT.app.tar.gz): Download the `.app` installer
+- [ChatGPT_0.12.0_macos_aarch64.dmg](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_macos_aarch64.dmg): Direct download installer
+- [ChatGPT_0.12.0_macos_x86_64.dmg](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_macos_x86_64.dmg): Direct download installer
 - Homebrew \
   Or you can install with _[Homebrew](https://brew.sh) ([Cask](https://docs.brew.sh/Cask-Cookbook)):_
   ```sh
@@ -53,13 +71,18 @@
   cask "chatgpt", args: { "no-quarantine": true }
   ```
 
+**If you encounter the error message `"ChatGPT" is damaged and can't be opened. You should move it to the Trash`. while installing software on macOS, it may be due to security settings restrictions in macOS. To solve this problem, please try the following command in Terminal:**
+
+```bash
+sudo xattr -r -d com.apple.quarantine /YOUR_PATH/ChatGPT.app
+```
+
 ### Linux
 
-- [chat-gpt_0.9.2_amd64.deb](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/chat-gpt_0.9.2_amd64.deb): Download `.deb` installer, advantage small size, disadvantage poor compatibility
-- [chat-gpt_0.9.2_amd64.AppImage](https://github.com/lencx/ChatGPT/releases/download/v0.9.2/chat-gpt_0.9.2_amd64.AppImage): Works reliably, you can try it if `.deb` fails to run
-- Available on [AUR](https://aur.archlinux.org/packages/chatgpt-desktop-bin) with the package name `chatgpt-desktop-bin`, and you can use your favourite AUR package manager to install it.
+- [ChatGPT_0.12.0_linux_x86_64.deb](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_linux_x86_64.deb): Download `.deb` installer, advantage small size, disadvantage poor compatibility
+- [ChatGPT_0.12.0_linux_x86_64.AppImage.tar.gz](https://github.com/lencx/ChatGPT/releases/download/v0.12.0/ChatGPT_0.12.0_linux_x86_64.AppImage.tar.gz): Works reliably, you can try it if `.deb` fails to run
 
-<!-- download end -->
+<!-- tr-download-end -->
 
 ## 📢 Announcement
 
@@ -86,7 +109,9 @@ You can look at **[awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt
 ## ✨ Features
 
 - Multi-platform: `macOS` `Linux` `Windows`
+- Text-to-Speech
 - Export ChatGPT history (PNG, PDF and Markdown)
+- The main window and system tray support custom URLs to wrap any website into a desktop application
 - Automatic application upgrade notification
 - Common shortcut keys
 - System tray hover window
@@ -127,14 +152,15 @@ You can look at **[awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt
 | macOS    | `/Users/lencx/.chatgpt`   |
 | Windows  | `C:\Users\lencx\.chatgpt` |
 
-- `[.chatgpt]` - application configuration root folder
-  - `chat.conf.json` - preferences configuration
+- `[.chatgpt]` - Application configuration root folder
+  - `chat.conf.json` - Preferences configuration
+  - `chat.awesome.json` - Custom URL lists, similar to browser bookmarks. Any URL can be used as the main window or tray window (**Control Conter -> Awesome**)
   - `chat.model.json` - prompts configuration，contains three parts:
     - `user_custom` - Requires manual data entry (**Control Conter -> Language Model -> User Custom**)
     - `sync_prompts` - Synchronizing data from [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) (**Control Conter -> Language Model -> Sync Prompts**)
     - `sync_custom` - Synchronize custom json and csv file data, support local and remote (**Control Conter -> Language Model -> Sync Custom**)
-  - `chat.model.cmd.json` - filtered (whether to enable) and sorted slash commands
-  - `[cache_model]` - caching model data
+  - `chat.model.cmd.json` - Filtered (whether to enable) and sorted slash commands
+  - `[cache_model]` - Caching model data
     - `chatgpt_prompts.json` - Cache `sync_prompts` data
     - `user_custom.json` - Cache `user_custom` data
     - `ae6cf32a6f8541b499d6bfe549dbfca3.json` - Randomly generated file names, cache `sync_custom` data
@@ -143,7 +169,7 @@ You can look at **[awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt
 
 ### Sync Custom
 
-Currently, only json and csv are supported for synchronizing custom files, and the following formats need to be met, otherwise the application will be abnormal：
+Currently, only JSON and CSV are supported for synchronizing custom files, and the following formats need to be met, otherwise the application will be abnormal：
 
 `JSON format:`
 
@@ -173,6 +199,7 @@ Currently, only json and csv are supported for synchronizing custom files, and t
 ## 📌 TODO
 
 <!-- - Web access capability ([#20](https://github.com/lencx/ChatGPT/issues/20)) -->
+
 - `Control Center` enhancement
 - `Pop-up Search` enhancement
 - ...
@@ -233,7 +260,7 @@ yarn dev
 yarn build
 ```
 
-- [The distDir configuration is set to "../dist" but this path doesn't exist](https://github.com/lencx/ChatGPT/discussions/180)
+- [The distDir configuration is set to "../dist" but this path doesn't exist.](https://github.com/lencx/ChatGPT/discussions/180)
 - [Error A public key has been found, but no private key. Make sure to set TAURI_PRIVATE_KEY environment variable.](https://github.com/lencx/ChatGPT/discussions/182)
 
 ## ❤️ Thanks
@@ -250,6 +277,8 @@ yarn build
 国内用户如果遇到使用问题或者想交流 ChatGPT 技巧，可以关注公众号“浮之静”，发送 “chat” 进群参与讨论。公众号会更新[《Tauri 系列》](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIzNjE2NTI3NQ==&action=getalbum&album_id=2593843659863752704)文章，技术思考等等，如果对 tauri 开发应用感兴趣可以关注公众号后回复 “tauri” 进技术开发群（想私聊的也可以关注公众号，来添加微信）。开源不易，如果这个项目对你有帮助可以分享给更多人，或者微信扫码打赏。
 
 <img width="180" src="https://user-images.githubusercontent.com/16164244/207228300-ea5c4688-c916-4c55-a8c3-7f862888f351.png"> <img width="200" src="https://user-images.githubusercontent.com/16164244/207228025-117b5f77-c5d2-48c2-a070-774b7a1596f2.png">
+
+<a href="https://t.zsxq.com/0bQikmcVw"><img width="360" src="./assets/zsxq.png"></a>
 
 ## License
 

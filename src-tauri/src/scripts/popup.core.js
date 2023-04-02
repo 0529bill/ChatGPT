@@ -1,7 +1,7 @@
 // *** Core Script - DALL·E 2 Core ***
 
 async function init() {
-  const chatConf = await invoke('get_chat_conf') || {};
+  const chatConf = await invoke('get_app_conf') || {};
   if (!chatConf.popup_search) return;
   if (!window.FloatingUIDOM) return;
 
@@ -33,7 +33,7 @@ async function init() {
   document.body.addEventListener('mousedown', async (e) => {
     selectionMenu.style.display = 'none';
     if (e.target.id === 'chagpt-selection-menu') {
-      await invoke('dalle2_window', { query: encodeURIComponent(window.__DALLE2_CONTENT__) });
+      await invoke('dalle2_search_window', { query: encodeURIComponent(window.__DALLE2_CONTENT__) });
     } else {
       delete window.__DALLE2_CONTENT__;
     }
